@@ -1,0 +1,18 @@
+1. install R packages
+   install.packages("packagename")
+   install.packages(c("a", "b", "c")) -> multipe packages to install
+
+   available.packages() -> list all the available packages
+
+   source("http://url/name.R")
+   biocLite()
+
+   biocLite(c("a", "b"))
+
+2. load packages
+   library(name)
+   eg. library(ggplot2)
+       search() -> list all the package modules of the topped loaded library
+
+
+
