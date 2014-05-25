@@ -103,4 +103,10 @@ The list of varilables are as followed:
 [88] "angle.Z.gravityMean."
 
 ###Cleaning precedure
+* Read data: Reads all the files required in this assignments into R objects, by function read.table(). These files includes X_train.txt, y_train.txt, X_test.txt, y_test.txt, features.txt, activity_labels.txt, subject_train.txt, subject_test.txt. 
+* Merge dataset into one: merge training and testing dataset into one larger dataset using built-in R fuction rbind(). This step produces three datasets: x dataset, y dataset and subject dataset.
+* Add columne names to x dataset: doing so in the second step is easier than adding variable names after extracting mean and std-related columens in the later step.
+* Extract mean and std-related columns: based on the way that the original columen are named, all the mean and std-related variables are named with either "mean", "Mean" and "std" in the names. Hence, a partial matching approaches is used using the function grep(). eg. grep("[M,n]ean|std", colnames(dataset)). The regular expression means that all the columns that contains words "Mean", "mean", or "std" are selected.
+* Replace activity id with actual string type names: the original data use 1-6 as the indication of 6 different activities. The pair-wise information between id and actual activity names are listed in the file "activity_labels.txt". The replacement of id by actual names may produce a clear understanding by just cooliing at the main dataset.
+* Create tidy data: This function is achieved by subsetting the data of each subject, subseting each activity and calculating the means. Each activity of a subject is listed as one row. The total 180 rows are inserted into R matrix and write out as a file for persistent storage. Besides,the rows are sorted first based on the subject id, then alphabetically based on the activity names.
 
