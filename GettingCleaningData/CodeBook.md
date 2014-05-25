@@ -1,17 +1,17 @@
-1. Experiment
+###Experiment
 * The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
 
 * The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
 
 
-2. Data(tidy version)
+###Data(tidy version)
 * The tidy version of the data contains the measurements on the mean and standand deviation for each measurement, which is extracted from the original dataset(http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones). 
 
 * Each subject is measured 6 different activities, including laying, sitting, standing, walking, walking downstairs and walking upstairs. For every activity, all the mean and standand deviation of the measurements are listed. 
 
 * The size of the dataset is 180 X 88, in which each subject has 6 activities, so 30 subjects produce 180 records(i.e. 180 rows in the dataset). The 88 columns, also called varilables include 86 mean and std-related measurements, activity name and subject id. 
 
-3. Variable
+###Variable
 The list of varilables are as followed:
 [1] "Subject"                             
  [2] "ActivityName"                        
@@ -102,4 +102,5 @@ The list of varilables are as followed:
 [87] "angle.Y.gravityMean."                
 [88] "angle.Z.gravityMean."
 
-4.    
+###Cleaning precedure
+
