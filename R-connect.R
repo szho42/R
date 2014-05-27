@@ -144,5 +144,29 @@ raster
 turnR
 seewave
 
+#Quiz of accessing github
+library(httr)
+oauth_endpoints("github")
+#set callback url to http://localhost:1410
+app.github <- oauth_app("github",key="f4c20b48241b3a9a2ef5",
+                        secret="13ec764dea43a3ab2ee4374e8f4c48cc1136fd6b")
 
+#install.packages("httpuv)
+github_token <- oauth2.0_token(oauth_endpoints("github"), app.github)
 
+req <- GET("https://api.github.com/users/jtleek/repos", config(token=github_token))
+stop_for_status(req)
+json1 <- content(req)
+json2 <- jsonlite::fromJSON(toJSON(json1))
+
+#install.packages("sqldf")
+#simulate the sql commands on local data frame
+acs <- read.csv("getdata_data_ss06pid.csv")
+sqldf("select pwgtp1 from acs where AGEP < 50")
+
+nchar("abc")
+
+data <- read.fwf("getdata_wksst8110.for", widths=c(10,9, 4, 9))
+temp <- data[,4]
+a <- temp[5:length(temp)]
+sum(as.numeric(as.character(a)))
